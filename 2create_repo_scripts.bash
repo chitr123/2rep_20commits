@@ -1,13 +1,15 @@
 #!/bin/bash
 nb_total_commits=100;
 nb_total_files=1000;
-files_per_commit="10 20 30 40 50";
+files_per_commit="20 30 40 50";
 commit_steps=20
-c_step=1
 file_path_10KB="/var/GIT_WORK/GIT_REPOS/my_10KB_file";
 commit_count=1
+
+
 for files in $files_per_commit;
 do echo $files;
+c_step=1;
 while [ $c_step -le $commit_steps ];
 do mkdir cstep_$c_step"_f_"$files
 cd cstep_$c_step"_f_"$files
